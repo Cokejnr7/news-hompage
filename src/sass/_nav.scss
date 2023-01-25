@@ -1,0 +1,24 @@
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+        cursor: pointer;
+    }
+    ul{
+        display: flex;
+        gap: 25px;
+    }
+
+    li{
+        color: $dark-grayish-blue;
+    }
+
+    li:hover{
+        color: $Soft-red;
+        cursor: pointer;
+    }
+
+}

@@ -1,4 +1,8 @@
 @import './config';
+@import './nav';
+@import './button';
+@import './trend';
+
 
 *,*::after,*::before{
     box-sizing: border-box;
@@ -14,27 +18,113 @@ li{
     list-style-type: none;
 }
 
+
 .app{
-    padding: 30px 10%;
-
-}
-
-nav{
+    padding: 20px 10%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
 
-    .logo{
-        cursor: pointer;
-    }
-    ul{
+
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+
+    .cont{
         display: flex;
-        gap: 25px;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 870px;
     }
 
-    li:hover{
-        color: $Soft-red;
-        cursor: pointer;
+    img{
+        max-width: 900px;
+    }
+
+    #{&}-container{
+        display: flex;
+        justify-content: space-between;
+
+        .highlight{
+            max-width: 420px;
+            min-width: 300px;
+        }
+
+    }
+
+    &-detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+
+        p{
+            color: $dark-grayish-blue;
+        }
+
+    }
+
+    .highlight-text{
+        font-weight: getWeight(bold);
+        font-size: 4rem;
+        line-height: 1;
+    }
+
+    .detail-text{
+        max-width: 380px;
+        line-height: 1.6;
+        font-size: 17px;
+    }
+
+    .article-cont{
+        display: flex;
+        gap: 35px;
+    }
+
+    .articles{
+        background-color: $very-dark-blue;
+        padding: 30px 20px;
+        width: 900px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .new{
+            color: $soft-orange;
+            font-weight: getWeight(medium);
+            font-size: 3rem;
+        }
+
+        .post{
+            
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 25px;
+
+            &-title{
+                color: $off-white;
+                cursor: pointer;
+
+                &:hover{
+                    color: $soft-orange;
+                }
+            }
+
+            &-content{
+                color: $grayish-blue;
+            }
+
+        }
+    }
+
+    .post-border{
+        border-bottom: .5px solid $grayish-blue;
     }
 
 }
+

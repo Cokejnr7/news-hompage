@@ -1,0 +1,19 @@
+%btn{
+    background-color: $Soft-red;
+    padding: 15px 30px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    max-width: 200px;
+    border: none;
+}
+
+
+.read-more{
+    @extend %btn;
+    color: #ffff;
+    font-weight: getWeight(medium);
+    &:hover{
+        background-color: black;
+    }
+}
+
