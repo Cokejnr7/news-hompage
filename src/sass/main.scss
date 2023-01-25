@@ -1,0 +1,40 @@
+@import './config';
+
+*,*::after,*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Inter;
+}
+
+li{
+    list-style-type: none;
+}
+
+.app{
+    padding: 30px 10%;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+        cursor: pointer;
+    }
+    ul{
+        display: flex;
+        gap: 25px;
+    }
+
+    li:hover{
+        color: $Soft-red;
+        cursor: pointer;
+    }
+
+}
